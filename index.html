@@ -239,9 +239,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 
 
 /* HERO EDITORIAL COVER */
-.hero-cover{width:100vw;margin-left:calc(50% - 50vw);position:relative;min-height:clamp(400px,54vh,680px);overflow:hidden;margin-bottom:48px}
-.hero-cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% center;display:block}
-.hero-cover-text{position:relative;z-index:1;min-height:clamp(400px,54vh,680px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;padding:clamp(40px,7vw,100px) max(var(--pad),5vw);width:min(48%,560px);background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.92) 68%,rgba(255,255,255,0) 100%)}
+.hero-cover{width:100vw;margin-left:calc(50% - 50vw);display:flex;flex-direction:column;margin-bottom:48px;overflow:hidden}
+.hero-cover-text{order:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;padding:28px var(--pad) 32px;width:100%;background:#fff}
+.hero-cover-img{order:2;width:100%;display:block;object-fit:cover;object-position:center;min-height:clamp(260px,56vw,440px)}
+@media(min-width:768px){
+  .hero-cover{flex-direction:row;align-items:stretch;min-height:clamp(400px,50vh,660px)}
+  .hero-cover-text{flex:0 0 45%;width:45%;max-width:none;min-height:clamp(400px,50vh,660px);padding:clamp(40px,5vw,88px) var(--pad)}
+  .hero-cover-img{flex:0 0 55%;width:55%;min-height:clamp(400px,50vh,660px);height:auto;align-self:stretch;object-position:72% center}
+}
 @media(max-width:1024px){
   :root{--pad:40px}
   .help-grid{grid-template-columns:1fr;gap:40px}
@@ -254,9 +259,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   :root{--pad:24px}
   .hero{min-height:auto;padding:96px 24px 60px}
   .hero-logo{width:clamp(200px,72vw,320px)}
-  .hero-cover{min-height:clamp(320px,62vw,480px);margin-bottom:36px}
-  .hero-cover-text{min-height:clamp(320px,62vw,480px);width:min(92%,520px);padding:32px 24px;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 82%,rgba(255,255,255,.55) 100%)}
-  .hero-cover-img{object-position:68% center}
+  .hero-cover{margin-bottom:36px}
+  .hero-cover-text{padding:24px var(--pad) 28px}
+  .hero-cover-img{min-height:clamp(240px,58vw,380px)}
   .hero-ctas{flex-direction:column;gap:20px}
   .stats{grid-template-columns:1fr 1fr}
   .stat{padding:28px 20px}
