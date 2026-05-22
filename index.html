@@ -239,13 +239,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 
 
 /* HERO EDITORIAL COVER */
-.hero-cover{width:100vw;margin-left:calc(50% - 50vw);display:flex;flex-direction:column;margin-bottom:48px;overflow:hidden}
-.hero-cover-text{order:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;padding:28px var(--pad) 32px;width:100%;background:#fff}
-.hero-cover-img{order:2;width:100%;display:block;object-fit:cover;object-position:center;min-height:clamp(260px,56vw,440px)}
+.hero-cover{width:100vw;margin-left:calc(50% - 50vw);margin-right:0;padding:0;display:flex;flex-direction:column;margin-bottom:48px;overflow:hidden}
+.hero-cover-text{order:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px var(--pad) 32px;width:100%;background:#fff}
+.hero-cover-text .hero-h,.hero-cover-text .hero-sub{margin-left:auto;margin-right:auto;text-align:center}
+.hero-cover-img{order:2;width:100%;max-width:100%;display:block;object-fit:cover;object-position:center;min-height:clamp(260px,56vw,440px);margin:0;padding:0}
 @media(min-width:768px){
   .hero-cover{flex-direction:row;align-items:stretch;min-height:clamp(400px,50vh,660px)}
-  .hero-cover-text{flex:0 0 45%;width:45%;max-width:none;min-height:clamp(400px,50vh,660px);padding:clamp(40px,5vw,88px) var(--pad)}
-  .hero-cover-img{flex:0 0 55%;width:55%;min-height:clamp(400px,50vh,660px);height:auto;align-self:stretch;object-position:72% center}
+  .hero-cover-text{flex:0 0 50%;width:50%;max-width:none;min-height:clamp(400px,50vh,660px);padding:clamp(40px,5vw,88px) var(--pad)}
+  .hero-cover-img{flex:0 0 50%;width:50%;min-height:clamp(400px,50vh,660px);height:auto;align-self:stretch;object-position:72% center;margin:0;padding:0}
 }
 @media(max-width:1024px){
   :root{--pad:40px}
@@ -259,9 +260,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   :root{--pad:24px}
   .hero{min-height:auto;padding:96px 24px 60px}
   .hero-logo{width:clamp(200px,72vw,320px)}
-  .hero-cover{margin-bottom:36px}
+  .hero-cover{margin-bottom:36px;margin-left:calc(50% - 50vw);margin-right:0;padding:0;width:100vw}
   .hero-cover-text{padding:24px var(--pad) 28px}
-  .hero-cover-img{min-height:clamp(240px,58vw,380px)}
+  .hero-cover-img{width:100%;min-height:clamp(240px,58vw,380px);margin:0;padding:0}
   .hero-ctas{flex-direction:column;gap:20px}
   .stats{grid-template-columns:1fr 1fr}
   .stat{padding:28px 20px}
